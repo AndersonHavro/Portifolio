@@ -1,27 +1,92 @@
-body {
-    background-image: url('https://image.freepik.com/fotos-gratis/textura-escura-da-ardosia-do-preto-cinzento-com-alta-resolucao-fundo-da-parede-de-pedra-preta-natural_38607-306.jpg');
-    background-size: 175vh;
-    height: 175vh;
-    font-family: arial;
+/*RESETANDO O CSS */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
+
+
+/*INSERINDO IMAGEM DE FUNDO NA TELA*/
+
+body {
+    background-size: auto 100vh;
+    font-family: Arial, Helvetica, sans-serif;
+    height: 100vh;
+    font-size: 10px;
+    background-color: black;
+}
+
+
+/*EDITANDO AS PROPRIEDADES PARA RESPONSIVIDADE*/
+
+@media(min-width:400px) {
+    body {
+        font-size: 14px;
+    }
+}
+
+
+/*ORGANIZANDO PARA O TITULO FICAR NO MEIO DO HEADER*/
+
+header {
+    min-height: 70vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#imgfundo {
+    position: absolute;
+    left: 7%;
+    top: 44%;
+    margin-left: -188px;
+    margin-top: -314px;
+    opacity: 0.2;
+}
+
+#imgFundofamilia {
+    position: absolute;
+    left: 0%;
+    top: 6.4%;
+    opacity: 0.05;
+}
+
+
+/*EDITANDO A BARRA DE MENU*/
 
 .menu {
-    background-color: white;
+    background-color: rgb(255, 255, 255);
+    position: fixed;
+    width: 100vw;
+    top: 0;
 }
 
-.menu li {
-    list-style: none;
+.menu a {
+    display: block;
+    padding: 1vw 12vw;
+    background: darkred;
 }
+
+
+/*EDITANDO FUNCOES EM TODA A LISTA DE MENU*/
 
 .menu ul {
     display: flex;
     justify-content: space-around;
 }
 
+
+/*EDITANDO OS NOMES DA LISTA DO MENU*/
+
+.menu li {
+    list-style: none;
+}
+
 a {
-    color: black;
+    color: #f7f7f7;
     font-weight: bold;
-    text-decoration: blink;
+    text-decoration: none;
 }
 
 a:hover {
@@ -30,10 +95,51 @@ a:hover {
 
 .subtitle,
 .site-title {
-    color: whitesmoke;
+    color: rgb(247, 247, 211);
     text-align: center;
+}
+
+.site-title {
+    font-family: 'Signika', sans-serif;
+    line-height: 2em;
 }
 
 .subtitle {
     font-style: italic;
+    color: #d8f7f7;
+    font-family: 'Dancing Script', cursive;
+}
+
+.img_familia {
+    height: 100px;
+    width: 100px;
+    border-radius: 63px;
+}
+
+.contato,
+.membrosFamilia {
+    padding: 1em;
+    color: gainsboro;
+    min-height: 70vh;
+}
+
+.contato,
+.membrosFamilia h2 {
+    color: gainsboro;
+    font-family: 'Signika', sans-serif;
+    margin-bottom: 1.5em;
+    font-size: 1.5em;
+}
+
+.membrosFamilia .grid1 {
+    display: grid;
+    gap: 2em;
+    grid-template-columns: repeat(3, 100px);
+    padding: 0.5em;
+}
+
+.icons {
+    font-size: 3.7em;
+    padding: 0.1em;
+    text-align: center;
 }
